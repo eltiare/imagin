@@ -74,5 +74,5 @@ The images included in the repo are for testing purposes only. If you wish to
 use them in your own projects, please contact the author for permission. The
 JavaScript code is licensed under the MIT license, details in the file.
 
-If you need any help you can file a bug at https://github.com/eltiare/imagin/issues
-or find me on Twitter: @eltiare
+If you need any help you can file a bug at [https://github.com/eltiare/imagin/issues](https://github.com/eltiare/imagin/issues)
+or find me on Twitter: [@eltiare](https://twitter.com/eltiare)
