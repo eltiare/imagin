@@ -53,6 +53,9 @@ options are for when loading a new image. The `loadingImage` option overides `lo
 style that however you wish. The loading image (if present) will be visible and
 vertically+horizontally centered in the container.
 
+To resize the image, simply resize the container. This plugin will take care of
+the rest.
+
 To load another image, call the function with the `load` argument.
     
     $('#image_container').imagin('load', {
