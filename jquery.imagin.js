@@ -150,7 +150,7 @@
                 width = data.options.imageAspect[0];
                 height = data.options.imageAspect[1];
             } else {
-                // Try to get the width / height of the image
+                // Try to get the width & height of the image
                 src = $img.attr('src');
                 if (src) { dims = privateMethods.getImageDims(src); }
                 if ( !(src && dims) ) {
@@ -231,7 +231,8 @@
                         className : 'imagin_textbox'
                     });
                 }
-                $loader.css({ position : 'absolute', zIndex: 1000 })
+                
+                $loader.css({ position : 'absolute', zIndex: 1000 });
                 
                 $this.data('imagin', {
                    target : $this,
@@ -240,7 +241,7 @@
                 });
                 
                 $img = $('<img/>', { className : 'imagin_img' });
-                $img.css({ maxWidth : '100%', 'maxHeight' : '100%'});
+                $img.css({'-ms-interpolation-mode': 'bicubic'});
                 $img.bind( 'loaded.imagin', bindMethods.finishNewImage );
                 $this.html('');
                 $this.append($img);
