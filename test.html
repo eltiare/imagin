@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+    <title>Imagin' Test Page</title>
+    <style type='text/css'>
+        body, html { padding: 0; margin: 0; height: 100%; width: 100%; }
+        .imagin_textbox { background: #000; color: #fff; }
+    </style>
+    <script type="text/javascript" src="jquery-1.5.2.js"></script>
+    <script type="text/javascript" src="jquery.ba-resize.js"></script>
+    <script type="text/javascript" src="jquery.imagin.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            $('div').imagin({
+                verticalAlign : 'middle',
+                horizontalAlign: 'center',
+                //loadingImage : 'loading.gif',
+                loadingText  : 'loading...',
+                defaultSize : 'medium',
+                sizes : {
+                    largest : [2000,2000],
+                    large   : [1000,1000],
+                    medium  : [500,500],
+                    small   : [200,200]
+                },
+                images : {
+                    largest : 'images/guitar.jpg',
+                    large   : 'images/guitar-1000.jpg',
+                    medium  : 'images/guitar-500.jpg',
+                    small   : 'images/guitar-200.jpg'
+                }
+            });
+            
+            setTimeout(function() {
+                $('div').imagin('load', {
+                    images : {
+                        largest : 'images/fall-path.jpg',
+                        large   : 'images/fall-path-1000.jpg',
+                        medium  : 'images/fall-path-500.jpg',
+                        small   : 'images/fall-path-200.jpg'
+                    }
+                });
+            }, 5000);
+            
+            setTimeout(function() {
+                $('div').css({ width: '100%', height: '100%'});
+            }, 8000)
+        });
+    </script>
+</head>
+
+<body>
+    
+    <div style="width: 100px; height: 100px; padding: 20px; border: 10px solid #000; margin: 15px; background: #ccc; ">
+        Loading image...
+    </div>
+
+
+
+</body>
+</html>
